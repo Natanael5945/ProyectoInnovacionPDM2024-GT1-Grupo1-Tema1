@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroParteUno"
+    android:background="@color/azul_fondo_pantallas">
+
+
+    <!--Componente del texto Registro-->
+    <TextView
+        android:id="@+id/txt_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/registration"
+        android:textColor="@color/azul_oscuro_boton"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Componente del texto Nombre Completo-->
+    <TextView
+        android:id="@+id/txt_nombre_completo_registro_parte1"
+        android:layout_width="123dp"
+        android:layout_height="20dp"
+        android:text="@string/fullName"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/azul_oscuro_boton"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edtxt_nombre_completo_registro_parte1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
+
+    <!--Componente de la caja de texto para nombre completo-->
+    <EditText
+        android:id="@+id/edtxt_nombre_completo_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="100dp"
+        android:width="311dp"
+        android:ems="10"
+        android:background="@drawable/entrada_personalizada"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/fullName"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/azul_hint"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_registro_parte1" />
+
+    <!--Componente del texto Correo-->
+    <TextView
+        android:id="@+id/txt_correo_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/mail"
+        android:textColor="@color/azul_oscuro_boton"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edtxt_correo_registro_parte1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
+
+    <!--Componente de la caja de texto para correo-->
+    <EditText
+        android:id="@+id/edtxt_correo_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:width="311dp"
+        android:background="@drawable/entrada_personalizada"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/mail"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/azul_hint"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_nombre_completo_registro_parte1" />
+
+    <!--Componente del texto Fecha de Nacimiento-->
+    <TextView
+        android:id="@+id/txt_fecha_nacimiento_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/dateBirth"
+        android:textColor="@color/azul_oscuro_boton"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edtxt_fecha_nacimiento_registro_parte1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <!--Componente de la caja de texto para fecha de nacimiento-->
+    <EditText
+        android:id="@+id/edtxt_fecha_nacimiento_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:width="311dp"
+        android:background="@drawable/entrada_personalizada"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/formatDateBirth"
+        android:inputType="date"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/azul_hint"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_correo_registro_parte1" />
+
+    <!--Componente del boton anterior-->
+    <Button
+        android:id="@+id/btn_anterior_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="150.5dp"
+        android:backgroundTint="@color/azul_oscuro_boton"
+        android:text="@string/previous"
+        app:icon="@drawable/icono_flecha_izquierda"
+        app:iconGravity="textStart"
+        app:iconPadding="6dp"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_fecha_nacimiento_registro_parte1"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <!--Componente del boton siguiente-->
+    <Button
+        android:id="@+id/btn_siguiente_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="150.5dp"
+        android:backgroundTint="@color/azul_claro_boton"
+        android:text="@string/next"
+        app:icon="@drawable/icono_flecha_derecha"
+        app:iconGravity="textEnd"
+        app:iconPadding="6dp"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/btn_anterior_registro_parte1"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_fecha_nacimiento_registro_parte1"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <!--Componente del texto ¿Ya posee cuenta?-->
+    <TextView
+        android:id="@+id/txt_poseo_cuenta_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ownAccount"
+        android:textColor="@color/azul_oscuro_boton"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_siguiente_registro_parte1"
+        app:layout_constraintVertical_bias="0.221" />
+
+    <!--Componente del texto Ingrese aqui-->
+    <TextView
+        android:id="@+id/txt_ingresa_aqui_registro_parte1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginHere"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/txt_poseo_cuenta_registro_parte1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_siguiente_registro_parte1"
+        app:layout_constraintVertical_bias="0.221" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

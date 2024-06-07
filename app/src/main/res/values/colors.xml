@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue">#2196F3</color>
+    <color name="azul_oscuro_boton">#001E30</color>
+    <color name="azul_claro_boton">#2196F3</color>
+    <color name="azul_fondo_pantallas">#E3F2FD</color>
+    <color name="azul_hint">#456179</color>
 </resources>
