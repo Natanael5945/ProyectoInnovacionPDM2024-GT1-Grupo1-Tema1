@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "673189800822",
+    "project_id": "innovacion-d24a9",
+    "storage_bucket": "innovacion-d24a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673189800822:android:a6b5fbeb70664077d8e857",
+        "android_client_info": {
+          "package_name": "com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYHdpcmfLId20RW7PMlfLP0ZWw0gj57Cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
