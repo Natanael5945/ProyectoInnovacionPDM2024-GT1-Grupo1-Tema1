@@ -3,17 +3,94 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/azul_fondo_pantallas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <!--Componente del texto o titulo hotel costa del sol-->
+
+    <!--Componente del boton Iniciar Sesión-->
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_nombre_hotel"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/nameHotel"
+        android:textColor="@color/azul_oscuro_boton"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356" />
+
+    <Button
+        android:id="@+id/btn_iniciar_sesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="311dp"
+        android:height="44dp"
+        android:backgroundTint="@color/azul_claro_boton"
+        android:fontFamily="@font/roboto"
+        android:text="@string/login"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="24dp"
+        app:icon="@drawable/icono_iniciar_sesion"
+        app:iconGravity="textEnd"
+        app:iconPadding="6dp"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.553" />
+
+    <!--Componente del boton Registrarse-->
+    <Button
+        android:id="@+id/btn_registrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="311dp"
+        android:height="44dp"
+        android:backgroundTint="@color/azul_oscuro_boton"
+        android:fontFamily="@font/roboto"
+        android:text="@string/register"
+        android:textStyle="bold"
+        app:cornerRadius="24dp"
+        app:icon="@drawable/icono_mas"
+        app:iconGravity="textEnd"
+        app:iconPadding="6dp"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_iniciar_sesion"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <!--Componente TextView del texto Calificaciones
+    android:text="@string/ratings"
+    android:textColor="@color/verde_link"
+    <TextView
+        android:id="@+id/txt_calificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:circularflow_defaultRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703" /> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
