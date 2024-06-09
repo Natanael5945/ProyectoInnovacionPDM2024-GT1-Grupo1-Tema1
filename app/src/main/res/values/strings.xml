@@ -18,4 +18,8 @@
     <string name="register2">Registrarme</string>
     <string name="welcome">Bienvenido</string>
     <string name="registration">Registro</string>
+    <string name="settings">Configuración</string>
+    <string name="home">Casa</string>
+    <string name="incidencias">Incidencias</string>
+    <string name="notifications">Notificaciones</string>
 </resources>

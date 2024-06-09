@@ -7,8 +7,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Models.AuthModel
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var auth: AuthModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,6 +21,9 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        auth = AuthModel()
+        exitLogin()
 
         val registerButton: Button = findViewById(R.id.btn_registrarse)
         val loginButton: Button = findViewById(R.id.btn_iniciar_sesion)
@@ -42,5 +48,13 @@ class MainActivity : AppCompatActivity() {
     {
         val intent: Intent = Intent(this, IniciarSesion::class.java)
         startActivity(intent)
+    }
+
+    private fun exitLogin()
+    {
+        if (auth.getCurrentUser() != null)
+        {
+            val intent: Intent = Intent(this, PanelActivity::class.java)
+        }
     }
 }

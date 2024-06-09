@@ -136,7 +136,7 @@ class RegistroParteDos : AppCompatActivity() {
     {
         if (auth.getCurrentUser() != null)
         {
-            val intent: Intent = Intent(this, MainActivity::class.java)
+            val intent: Intent = Intent(this, PanelActivity::class.java)
             startActivity(intent)
         }
     }

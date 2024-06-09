@@ -102,7 +102,8 @@ class IniciarSesion : AppCompatActivity() {
     {
         if (auth.getCurrentUser() != null)
         {
-            goMainActivity()
+            val intent: Intent = Intent(this, PanelActivity::class.java)
+            startActivity(intent)
         }
     }
 

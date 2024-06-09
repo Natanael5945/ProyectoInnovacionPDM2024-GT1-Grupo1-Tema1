@@ -139,7 +139,7 @@ class RegistroParteUno : AppCompatActivity() {
     {
         if (auth.getCurrentUser() != null)
         {
-            goMainActivity()
+            val intent: Intent = Intent(this, PanelActivity::class.java)
         }
     }
 }
