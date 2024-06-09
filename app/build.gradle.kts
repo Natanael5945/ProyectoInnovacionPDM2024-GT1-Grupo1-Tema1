@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1"
-        minSdk = 22
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
