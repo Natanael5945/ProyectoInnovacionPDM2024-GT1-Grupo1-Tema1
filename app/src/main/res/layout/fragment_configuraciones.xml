@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_fondo_pantallas"
+    tools:context=".Configuraciones">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/txt_configuracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/settings_menu"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/azul_oscuro_boton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036" />
+
+        <Button
+            android:id="@+id/btn_info_personal_configuraciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:width="370dp"
+            android:height="48dp"
+            android:backgroundTint="@color/azul_claro_boton"
+            android:fontFamily="@font/montserrat"
+            android:gravity="start|center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/info_personal"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/azul_fondo_pantallas" />
+
+        <Button
+            android:id="@+id/btn_cambiar_contra_configuraciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:width="370dp"
+            android:height="48dp"
+            android:backgroundTint="@color/azul_claro_boton"
+            android:fontFamily="@font/montserrat"
+            android:gravity="start|center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/change_password"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_info_personal_configuraciones"
+            app:rippleColor="@color/azul_fondo_pantallas"/>
+
+        <Button
+            android:id="@+id/btn_cerrar_sesion_configuraciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:width="370dp"
+            android:height="50dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/roboto"
+            android:text="@string/sign_off"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:icon="@drawable/icono_cerrar_sesion"
+            app:iconGravity="textEnd"
+            app:iconPadding="8dp"
+            app:iconSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_cambiar_contra_configuraciones"
+            app:layout_constraintVertical_bias="0.012" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

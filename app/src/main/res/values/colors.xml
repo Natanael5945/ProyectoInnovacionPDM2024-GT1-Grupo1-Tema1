@@ -7,4 +7,5 @@
     <color name="azul_claro_boton">#2196F3</color>
     <color name="azul_fondo_pantallas">#E3F2FD</color>
     <color name="azul_hint">#456179</color>
+    <color name="azul_fondo_punteado">#BBDEFB</color>
 </resources>

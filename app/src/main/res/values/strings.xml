@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ProyectoInnovacionPDM2024-GT1-Grupo1-Tema1</string>
-    <string name="nameHotel">BIENVENIDO MUNICIPAL APP</string>
+    <string name="welcome_app">BIENVENIDO MUNICIPAL APP</string>
     <string name="login">Iniciar Sesión</string>
     <string name="register">Registrarse</string>
     <string name="mail">Correo</string>
@@ -22,4 +22,30 @@
     <string name="home">Casa</string>
     <string name="incidencias">Incidencias</string>
     <string name="notifications">Notificaciones</string>
+    <string name="name_app">MUNICIPAL APP</string>
+    <string name="settings_menu">Configuración</string>
+    <string name="info_personal">Información personal</string>
+    <string name="change_password">Cambiar contraseña</string>
+    <string name="sign_off">Cerrar Sesión</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="old_password">Contraseña antigua</string>
+    <string name="repeat_password2">Repetir contraseña</string>
+    <string name="save">Guardar</string>
+    <string name="dui">DUI</string>
+    <string name="number_digits_dui">########-#</string>
+    <string name="example_mail">pdm115@ues.edu.sv</string>
+    <string name="change_photo">Cambiar foto</string>
+    <string name="upload">Subir</string>
+    <string name="report">Reportar</string>
+    <string name="name_incidence">Nombre incidencia</string>
+    <string name="location">Ubicación</string>
+    <string name="description">Descripción</string>
+    <string name="description_incidence">Descripción incidencia</string>
+    <string name="address">Dirección</string>
+    <string name="address_incidence">Dirección indencecia</string>
+    <string name="location_current">Ubicación actual</string>
+    <string name="name">Nombre</string>
+    <string name="gps">GPS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

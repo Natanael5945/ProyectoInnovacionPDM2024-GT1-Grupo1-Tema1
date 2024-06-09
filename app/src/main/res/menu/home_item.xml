@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/item_habitaciones"
+        android:id="@+id/item_inicio"
         android:icon="@drawable/home"
         android:title="@string/home"/>
 
     <item
-        android:id="@+id/item_hoteles"
+        android:id="@+id/item_notificacion"
         android:icon="@drawable/notifications"
         android:title="@string/notifications"/>
 
     <item
-        android:id="@+id/item_reservas_activas"
+        android:id="@+id/item_incidencias"
         android:icon="@drawable/incidencias"
         android:title="@string/incidencias"/>
 
