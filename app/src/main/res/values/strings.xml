@@ -46,6 +46,9 @@
     <string name="location_current">Ubicación actual</string>
     <string name="name">Nombre</string>
     <string name="gps">GPS</string>
+    <string name="send">Enviar</string>
+    <string name="report_incidence">Incidencias reportadas</string>
+    <string name="edit_incidence">Editar incidencia</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
