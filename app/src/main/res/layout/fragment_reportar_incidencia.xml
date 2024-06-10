@@ -134,6 +134,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/edtxt_descripcion_incidencia" />
 
+        <Button
+            android:id="@+id/guardar_incidencia"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:width="370dp"
+            android:backgroundTint="@color/azul_claro_boton"
+            android:text="@string/guardar"
+            app:iconGravity="textEnd"
+            app:iconSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_gps" />
+
+
         <TextView
             android:id="@+id/txt_ubicacion_actual"
             android:layout_width="wrap_content"
@@ -143,12 +158,22 @@
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/azul_oscuro_boton"
-            app:layout_constraintTop_toBottomOf="@id/btn_gps"
+            app:layout_constraintTop_toBottomOf="@id/guardar_incidencia"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="20dp"
             app:layout_constraintHorizontal_bias="0.06"
             />
+
+        <fragment
+            android:id="@+id/google_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_ubicacion_actual" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

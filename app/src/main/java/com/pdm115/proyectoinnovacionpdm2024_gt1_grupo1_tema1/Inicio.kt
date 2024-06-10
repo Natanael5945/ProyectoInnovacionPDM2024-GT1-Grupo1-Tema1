@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.commit
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +36,17 @@ class Inicio : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inicio, container, false)
+        val view =  inflater.inflate(R.layout.fragment_inicio, container, false)
+        val crearIncidenciaButton: Button = view.findViewById(R.id.btn_reportar_incidencia_inicio)
+
+        crearIncidenciaButton.setOnClickListener {
+            parentFragmentManager.commit {
+                replace(R.id.frame_contenedor, ReportarIncidencia())
+                addToBackStack(null)
+            }
+        }
+
+        return view
     }
 
     companion object {
@@ -56,4 +68,5 @@ class Inicio : Fragment() {
                 }
             }
     }
+
 }

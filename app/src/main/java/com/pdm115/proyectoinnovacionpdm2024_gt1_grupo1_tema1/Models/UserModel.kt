@@ -55,7 +55,7 @@ class UserModel {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                callback(null) // Handle error appropriately
+                callback(null) // Handle error
             }
         })
     }
