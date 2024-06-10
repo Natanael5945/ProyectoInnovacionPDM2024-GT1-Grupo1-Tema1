@@ -288,6 +288,27 @@
                 android:layout_marginBottom="20dp"
                 />
 
+            <Button
+                android:id="@+id/btn_anterior_configuracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="370dp"
+                android:backgroundTint="@color/azul_oscuro_boton"
+                android:text="@string/previous"
+                app:icon="@drawable/icono_flecha_izquierda"
+                app:iconGravity="textStart"
+                app:iconPadding="6dp"
+                app:iconSize="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.39"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_save_nueva_contra"
+                app:layout_constraintVertical_bias="0.49"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                />
+
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
@@ -306,6 +327,8 @@
                 app:shapeAppearanceOverlay="@style/ImagenCircular"
                 app:strokeColor="@color/black"
                 app:strokeWidth="3dp" />
+
+
 
 
 

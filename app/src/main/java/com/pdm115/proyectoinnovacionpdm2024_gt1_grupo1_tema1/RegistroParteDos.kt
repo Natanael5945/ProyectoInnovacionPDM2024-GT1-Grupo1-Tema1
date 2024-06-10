@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Data.User
 import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Models.AuthModel
+import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Models.EmailExistsCallback
 import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Models.UserModel
 import java.util.UUID
 
@@ -78,17 +79,33 @@ class RegistroParteDos : AppCompatActivity() {
             Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show()
             return
         }
+        var existUser = false;
+        auth.existEmail(email, object : EmailExistsCallback {
+            override fun onResult(exists: Boolean) {
+                if (exists) {
+                    existUser = true
+                }
+            }
+        })
+        if (existUser) {
+            Toast.makeText(this, "El correo ya existe", Toast.LENGTH_LONG).show()
+            return
+        }
 
-        val user: User = User(
+        var user: User = User(
             UUID.randomUUID().toString(),
             fullname,
+            username.text.toString(),
             email,
             birthDate,
-            username.text.toString()
+            null
         )
 
         try {
             auth.createUserWithEmailAndPassword(email, password.text.toString())
+
+            val userAuth = auth.getCurrentUser()
+            user.idUser = userAuth?.uid.toString()
             userModel.createUser(user)
             Toast.makeText(this, "Usuario creado con éxito", Toast.LENGTH_LONG).show()
             goLogin()
@@ -99,6 +116,8 @@ class RegistroParteDos : AppCompatActivity() {
 
         }
     }
+
+
     private fun bindEditText()
     {
         username = findViewById(R.id.edtxt_nombre_usuario_parte2)

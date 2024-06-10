@@ -1,6 +1,10 @@
 package com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Models
 
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.Query
+import com.google.firebase.database.ValueEventListener
 import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Data.User
 
 class UserModel {
@@ -14,30 +18,46 @@ class UserModel {
         const val FIELD_BIRTHDATE = "birthDate"
     }
 
-    private val database = FirebaseDatabase.getInstance().reference // Referencia a la base de datos
+    private val database = FirebaseDatabase.getInstance().getReference(COLLECTION_USERS) // Referencia a la base de datos
 
     fun createUser(user: User) {
-        database.child(COLLECTION_USERS).child(user.idUser).setValue(user)
+        database.child(user.idUser).setValue(user)
     }
 
     fun updateUser(user: User) {
-        database.child(COLLECTION_USERS).child(user.idUser).setValue(user)
+        database.child(user.idUser).setValue(user)
     }
 
     fun deleteUser(user: User) {
-        database.child(COLLECTION_USERS).child(user.idUser).removeValue()
+        database.child(user.idUser).removeValue()
     }
 
     fun getUserById(idUser: String) {
-        database.child(COLLECTION_USERS).child(idUser)
+        database.child(idUser)
     }
 
     fun getAllUsers() {
-        database.child(COLLECTION_USERS)
+        database.orderByChild(FIELD_FULLNAME)
     }
 
-    fun getUserByEmail(email: String) {
-        database.child(COLLECTION_USERS).orderByChild(FIELD_EMAIL).equalTo(email)
+    fun getUserByEmail(email: String, callback: (User?) -> Unit) {
+        database.orderByChild(FIELD_EMAIL).equalTo(email).addListenerForSingleValueEvent(object :
+            ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (userSnapshot in snapshot.children) {
+                        val user = userSnapshot.getValue(User::class.java)
+                        callback(user)
+                        return
+                    }
+                }
+                callback(null) // No user found
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                callback(null) // Handle error appropriately
+            }
+        })
     }
 
 }

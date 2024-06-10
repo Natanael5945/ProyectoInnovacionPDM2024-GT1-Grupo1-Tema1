@@ -11,13 +11,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Models.AuthModel
+import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Models.UserModel
+import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Store.UserStore
 
 class IniciarSesion : AppCompatActivity() {
 
     private lateinit var email: EditText
     private lateinit var password: EditText
+    private lateinit var userStore: UserStore
 
     private lateinit var auth: AuthModel
+    private lateinit var userModel: UserModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -42,6 +47,8 @@ class IniciarSesion : AppCompatActivity() {
             sendData()
         }
 
+        userModel = UserModel()
+
     }
 
     private fun sendData ()
@@ -61,6 +68,7 @@ class IniciarSesion : AppCompatActivity() {
         try {
             auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
             Toast.makeText(this, "Inicio de sesion exitoso",  Toast.LENGTH_LONG).show()
+
             goMainActivity()
         }
         catch(e: Exception) {

@@ -5,9 +5,12 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class User (
-    val idUser: String,
+    var idUser: String,
     val fullname: String,
     val username: String,
     val email: String,
-    val birthDate: String
-):Parcelable
+    val birthDate: String,
+    val dui: String?
+):Parcelable {
+    constructor():this("","","","","", null)
+}
