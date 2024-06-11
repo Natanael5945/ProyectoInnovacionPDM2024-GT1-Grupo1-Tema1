@@ -1,5 +1,6 @@
 package com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.commit
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Adapters.IncidenciaAdapter
+import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Data.Incidencia
+import com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Models.IncidenciaModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,12 +29,18 @@ class Inicio : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var incidenciaAdapter: IncidenciaAdapter
+    private lateinit var incidencias: ArrayList<Incidencia>
+    private lateinit var incidenciaModel: IncidenciaModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        incidenciaModel = IncidenciaModel()
+        incidencias = arrayListOf()
     }
 
     override fun onCreateView(
@@ -46,7 +58,26 @@ class Inicio : Fragment() {
             }
         }
 
+        val revycleView: RecyclerView = view.findViewById(R.id.recycler_view_incidencias_ya_reportadas_inicio)
+        revycleView.layoutManager = LinearLayoutManager(activity)
+        revycleView.setHasFixedSize(true)
+
+        incidenciaAdapter = IncidenciaAdapter(incidencias)
+
+        revycleView.adapter = incidenciaAdapter
+
+        EventChangeListener()
+
         return view
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private fun EventChangeListener() {
+        incidenciaModel.getAllIncidencias {
+            incidencias.clear()
+            incidencias.addAll(it)
+            incidenciaAdapter.notifyDataSetChanged()
+        }
     }
 
     companion object {

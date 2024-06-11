@@ -1,5 +1,6 @@
 package com.pdm115.proyectoinnovacionpdm2024_gt1_grupo1_tema1.Models
 
+import android.util.Log
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -77,13 +78,16 @@ class IncidenciaModel {
                 if (snapshot.exists()) {
                     for (incidenciaSnapshot in snapshot.children) {
                         val incidencia = incidenciaSnapshot.getValue(Incidencia::class.java)
+                        Log.e("INCIDENCIAS", incidencia.toString())
                         incidencias.add(incidencia!!)
                     }
                 }
+                Log.e("INCIDENCIAS", incidencias.toString())
                 callback(incidencias)
             }
 
             override fun onCancelled(error: DatabaseError) {
+                Log.e("ERROR", error.message)
                 callback(ArrayList()) // Handle error
             }
         })
